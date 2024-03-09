@@ -4,13 +4,14 @@
 #include "vector.h"
 
 // constructors & destructor implemetacion
-
-vector::vector(size_type size) 
+template <class T>
+vector<T>::vector(size_type size) 
 	: v_size{size}
 	, v_capacity{size} 
 	, arr{new value_type[size]} {}
 
-vector::vector(size_type size, value_type val)
+template <class T>
+vector<T>::vector(size_type size, value_type val)
 	: v_size{size}
 	, v_capacity{size}
 	, arr{new value_type[size]}
@@ -21,7 +22,8 @@ vector::vector(size_type size, value_type val)
 	}
 }
 
-vector::vector(const vector& rvh) 
+template <class T>
+vector<T>::vector(const vector& rvh) 
 	: v_size{rvh.v_size}
 	, v_capacity{rvh.v_capacity}
 	, arr{new value_type[rvh.v_capacity]}
@@ -31,7 +33,15 @@ vector::vector(const vector& rvh)
 	}
 }
 
-vector::~vector()
+template <class T>
+vector<T>::vector()
+{
+	this -> v_size = 0;
+	this -> v_capacity = 0;
+	this -> arr = nullptr;
+}
+template <class T>
+vector<T>::~vector()
 {
 	clear();
 }
@@ -106,6 +116,8 @@ template <typename T>
 
 void vector<T>::clear()
 {
+	this -> v_size = 0;
+	this -> v_capacity = 0;
 	delete [] this -> arr;
 	this -> arr = nullptr;
 }

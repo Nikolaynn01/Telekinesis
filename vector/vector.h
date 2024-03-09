@@ -1,3 +1,5 @@
+#include <iostream>
+#include <cstddef>
 #ifndef VECTOR_H
 #define VECTOR_H
 
@@ -37,7 +39,7 @@ class vector {
 
 		//constructors/destructor
 
-		vector(initializer_lis<value_type>);
+//		vector(initializer_list<value_type>);
 		vector(size_type size);
 		vector(size_type size, value_type val);
 		vector(const vector& rhv);
