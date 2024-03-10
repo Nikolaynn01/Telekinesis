@@ -1,7 +1,10 @@
-#include <iostream>
-#include <cstddef>
 #ifndef VECTOR_H
 #define VECTOR_H
+
+
+#include <iostream>
+#include <cstddef>
+#include <initializer_list>
 
 template <typename T>
 
@@ -39,7 +42,7 @@ class vector {
 
 		//constructors/destructor
 
-//		vector(initializer_list<value_type>);
+		vector(std::initializer_list<value_type>);
 		vector(size_type size);
 		vector(size_type size, const_referance val);
 		vector(const vector& rhv);
