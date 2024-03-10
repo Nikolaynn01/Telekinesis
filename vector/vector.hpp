@@ -11,7 +11,7 @@ vector<T>::vector(size_type size)
 	, arr{new value_type[size]} {}
 
 template <class T>
-vector<T>::vector(size_type size, value_type val)
+vector<T>::vector(size_type size, const_referance val)
 	: v_size{size}
 	, v_capacity{size}
 	, arr{new value_type[size]}

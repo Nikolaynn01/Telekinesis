@@ -41,7 +41,7 @@ class vector {
 
 //		vector(initializer_list<value_type>);
 		vector(size_type size);
-		vector(size_type size, value_type val);
+		vector(size_type size, const_referance val);
 		vector(const vector& rhv);
 		vector();
 		~vector();
