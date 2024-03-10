@@ -55,17 +55,17 @@ template <typename T>
 vector<T>::const vector& operator=(const vector& rvh)
 {
 	if (this != &rvh) {
-		clear();
+
+		delete [] this -> arr;
+
+		this -> v_size = rvh.v_size;
+		this -> v_capacity = rvh.v_capacity;
+		this -> arr = new value_type[rvh.v_capacity];
+
+		for (size_type i = 0; i < rvh.v_size; ++i) {
+			this -> arr[i] = rvh.arr[i];
+		}
 	}
-
-	this -> v_size = rvh.v_size;
-	this -> v_capacity = rvh.v_capacity;
-	this -> arr = new value_type[rvh.v_capacity];
-
-	for (size_type i = 0; i < rvh.v_size; ++i) {
-		this -> arr[i] = rvh.arr[i];
-	}
-
 	return *this;
 }
 

@@ -42,7 +42,7 @@ class vector {
 
 		//constructors/destructor
 
-		vector(std::initializer_list<value_type>);
+		vector(std::initializer_list<value_type> init);
 		vector(size_type size);
 		vector(size_type size, const_referance val);
 		vector(const vector& rhv);
