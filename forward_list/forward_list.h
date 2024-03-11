@@ -1,6 +1,8 @@
 #ifndef FORWARD_LIST_H
 #define FORWARD_LIST_H
+
 #include <cstddef>
+
 template <typename T>
 
 class forward_list {
@@ -42,6 +44,7 @@ class forward_list {
 };
 
 #include "forward_list.hpp"
+
 #endif
 
 
