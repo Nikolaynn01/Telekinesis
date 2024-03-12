@@ -1,15 +1,16 @@
+#include "vector.h"
+
 #ifndef VECTOR_H
 #define VECTOR_H
 
-#include "vector.h"
 
 // constructors & destructor implemetacion
+
 template <class T>
 vector<T>::vector(size_type size) 
 	: v_size{size}
 	, v_capacity{size} 
 	, arr{new value_type[size]} {}
-
 template <class T>
 vector<T>::vector(size_type size, const_referance val)
 	: v_size{size}
@@ -51,7 +52,7 @@ vector<T>::~vector()
 
 
 template <typename T>
-
+vector<T>::const_referance
 vector<T>::const vector& operator=(const vector& rvh)
 {
 	if (this != &rvh) {
@@ -71,7 +72,7 @@ vector<T>::const vector& operator=(const vector& rvh)
 
 template <typename T>
 
-vector <T>::referance
+vector<T>::referance
 	vector<T>::at(size_type index) const
 {
 	if (index < 0 || index > v_size) {
@@ -107,7 +108,7 @@ vector<T>::size_type
 template <typename T>
 
 vector<T>::size_type
-	vector<T>::capacity()
+	vector::capacity()
 {
 	return this -> v_capacity;
 }
