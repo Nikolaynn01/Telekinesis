@@ -1,7 +1,8 @@
+#include "forward_list.h"
+
 #ifndef FORWARD_LIST_H
 #define FORWARD_LIST_H
 
-#include "forward_list.h"
 
 //constructor - destructor implementation
 
